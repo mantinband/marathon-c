@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include <stdbool.h>
 #include <stdlib.h>
 
 #define MAX_FILE_NAME 20
@@ -13,7 +12,6 @@
 int getNumber(char *a);
 int isGrowingSeries(char **strings, int size);
 int isFileAGrowingSeries(char *fileName);
-
 int getNumberOfLines(FILE *fp);
 
 int main(){
