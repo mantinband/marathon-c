@@ -31,13 +31,11 @@ int isConcSorted(int a1[], int size1, int a2[], int size2){
  *  output: 1 if the array is sorted. 0 otherwise
  * */
 int isSorted(int *a, int size){
-    int i;
-
-    for (i=0; i<size-1; i++){
-        if (!isConcSorted(a,i+1,a+i+1,size-i-1)){
-            return 0;
-        }
+    if (size == 1){
+        return 1;
     }
-
-    return 1;
+    if (isConcSorted(a,1,a+1,size-1)){
+        return isSorted(a+1,size-1);
+    }
+    return 0;
 }
